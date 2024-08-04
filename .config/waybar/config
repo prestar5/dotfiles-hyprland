@@ -1,0 +1,128 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+    "modules-left": ["custom/arch", "hyprland/workspaces", "tray"],
+    "modules-center": ["clock",],
+    "modules-right": ["custom/updates", "group/systemstats", "pulseaudio", "network", "custom/notification", "battery", "custom/powermenu"],
+    "custom/arch": {
+      "format": "",
+      "tooltip-format": "i use arch btw",
+      "on-click": "exec .config/rofi/launchers/type-6/launcher.sh"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": true,
+      "show-special": true,
+      "format-icons": {
+	"1": "",
+	"2": "",
+	"3": "",
+	"4": "",
+	"5": "󰆈",
+	"6": "",
+	"10": "󰙯",
+        "active": "",
+	"default": "",
+	"special": "",
+      },
+    },
+    "clock": {
+      "format": "<span color='#b4befe'>󰃭 </span> {:%B %d, %Y, %R}",
+      "tooltip": false,
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "tooltip": false,
+      "format": "<span color='#b4befe'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "pulseaudio": {
+      "format": "<span color='#b4befe'>{icon}</span>",
+      "format-muted": "<span color='#f38ba8'>󰝟</span>",
+      "tooltip-format": "Volume: {volume}%",
+      "format-icons": {
+        "headphone": "",
+        "default": ["󰕿", "󰖀", "󰕾"]
+      },
+      "scroll-step": 1,
+      "on-click": "pkill pavucontrol || exec pavucontrol",
+      "ignored-sinks": [
+	 "microphone_and_desktop_audio Audio/Sink sink",
+	],
+    },
+    "network": {
+      "interface": "wlp5s0",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#b4befe'> </span>",
+      "format-ethernet": "<span color='#b4befe'></span>",
+      "format-disconnected": "<span color='#b4befe'>󰖪 </span>Disconnected",
+      "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+      "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+      "tooltip-format-ethernet": "{ifname} ",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "sh ~/.config/rofi/scripts/rofi-wifi-menu.sh"
+    },
+    "battery": {
+      "format": "<span color='#b4befe'>{icon}</span> {capacity}%",
+      "format-icons": ["<span color='#f38ba8'>󱊡</span>", "󱊢", "󱊣"],
+      "format-charging": "<span color='#b4befe'>󰂄</span> {capacity}%",
+      "tooltip-format": "Usage time: {time}",
+      "tooltip-format-charging": "Time until full: {time}",
+    },
+    "tray": {
+      "icon-size": 16,
+      "spacing": 5
+    },
+    "cpu": {
+      "format": "<span color='#b4befe'> </span> {usage}%"
+    },
+    "memory": {
+      "format": "<span color='#b4befe'> </span> {percentage}%"
+    },
+    "group/systemstats": {
+       "orientation": "horizontal",
+       "modules": [
+		"cpu",
+		"memory",
+	]
+     },
+"custom/powermenu": {
+      "format": "<span color='#f38ba8'>⏻</span>",
+      "on-click": "exec .config/rofi/powermenu/type-5/powermenu.sh"
+    },
+
+"custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂚",
+      "dnd-notification": "󰂛<span foreground='red'></span>",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "󰅸",
+      "inhibited-none": "󰂜",
+      "dnd-inhibited-notification": "󰪑",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "on-click-middle": "swaync-client -C",
+    "escape": true
+  },
+
+"custom/updates": {
+    "format": "<span color='#b4befe'></span> {}",
+    "interval": 3600,
+    "exec": "~/.config/waybar/scripts/updatecheck.sh",
+    "return-type": "json",
+    "exec-if": "exit 0",
+    "signal": 8,
+    "on-click": "exec kitty -e paru",
+  },
+
+}

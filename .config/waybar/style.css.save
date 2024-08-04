@@ -1,0 +1,138 @@
+* {
+  border: none;
+  font-family: 'aArimo Nerd Font';
+  font-size: 14px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  min-height: 18px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+
+
+#custom-arch {
+  border-radius: 12px;
+  background-color: #1e1e2b;
+  color: #b4befe;
+  margin-top: 15px;
+  margin-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+
+#workspaces {
+  border-radius: 12px;
+  background-color: #1e1e2b;
+  color: #b4befe;
+  margin-top: 15px;
+  margin-right: 5px;
+  padding-left: 12px;
+  padding-right: 12px;
+  
+}
+
+#custom-arch {
+  font-size: 20px;
+  margin-left: 15px;
+  color: #74c7ec;
+}
+
+#workspaces button {
+  background: #1e1e2b;
+  color: #b4befe;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#workspaces button.active {
+  background: #313244;
+  border-radius: 120px;
+}
+
+#clock, #custom-paru, #custom-pacman, #backlight, #pulseaudio, #network, #battery, #custom-notification, #custom-powermenu {
+  border-radius: 12px;
+  background-color: #1e1e2b;
+  color: #cdd6f4;
+  margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 5px;
+  
+}
+
+#tray {
+  border-radius: 12px;
+  background-color: #1e1e2b;
+  color: #cdd6f4;
+  margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+
+#cpu {
+  border-radius: 12px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #1e1e2b;
+  color: #cdd6f4;
+  margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 5px;
+  
+}
+
+#memory {
+  border-radius: 12px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #1e1e2b;
+  color: #cdd6f4;
+  margin-top: 15px;
+  padding-left: 5px;
+  padding-right: 10px;
+  margin-right: 5px;
+  
+}
+
+#custom-powermenu {
+	margin-right: 15px;
+  
+}
+
+#backlight, #bluetooth {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 5px;
+  margin-right: 0;
+  
+}
+
+#pulseaudio {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 5px;
+  
+}
+
+#clock {
+  margin-right: 0;
+}
+
+tooltip {
+  color: black;
+  background-color: #1e1e2e;
+  text-shadow: none;
+  border-radius: 12px;
+}
+
+tooltip * {
+  color: #cdd6f4;
+  text-shadow: none;
+}
+
