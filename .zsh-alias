@@ -1,0 +1,9 @@
+alias fastfetch="clear; echo; fastfetch"
+alias btw="fastfetch"
+alias i3c="nano ~/.config/i3/config"
+alias polybarc="nano ~/.config/polybar/config.ini"
+alias ff="fastfetch"
+alias neofetch="fastfetch"
+alias aw="wiki-search-html"
+alias cd="z"
+alias dotfiles='/usr/bin/git --git-dir=/home/max/dots --work-tree=/home/max'
