@@ -8,7 +8,7 @@
     fg-col: #cdd6f4;
     fg-col2: #eba0ac;
     grey: #6c7086;
-    mauve: #cba6f7;
+    lavender: #b4befe;
 
     width: 900;
     font: "JetBrainsMono Nerd Font 11";
@@ -22,7 +22,7 @@ element-text, element-icon , mode-switcher {
 window {
     height: 360px;
     border: 2px;
-    border-color: @mauve;
+    border-color: @lavender;
     background-color: @bg-col;
 }
 
@@ -38,7 +38,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @mauve;
+    background-color: @lavender;
     padding: 6px;
     text-color: @bg-col;
     border-radius: 3px;
@@ -95,7 +95,7 @@ button {
 
 button selected {
   background-color: @bg-col;
-  text-color: @mauve;
+  text-color: @lavender;
 }
 
 message {
@@ -108,6 +108,6 @@ message {
 textbox {
     padding: 6px;
     margin: 20px 0px 0px 20px;
-    text-color: @mauve;
+    text-color: @lavender;
     background-color: @bg-col-light;
 }
