@@ -96,6 +96,7 @@ dwindle {
 ## master
 master {
 	special_scale_factor = 0.75
+	mfact = .615
 	orientation = left
 }
 
