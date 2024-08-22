@@ -21,7 +21,7 @@ sudo echo "access granted! proceeding with installation..."
 sudo pacman -Sy
 
 echo "installing git and rust for paru installation..."
-sudo pacman -S git rust --noconfirm
+sudo pacman -S rust --noconfirm
 
 echo "installing paru..."
 
