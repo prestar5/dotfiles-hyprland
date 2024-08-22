@@ -65,14 +65,14 @@ chmod +x ~/dotfiles-hyprland/.config/rofi/scripts/rofi-wifi-menu.sh
 echo "done!"
 
 echo "moving files to correct locations..."
-cp -r "~/dotfiles-hyprland/.config" "~"
-cp -r "~/dotfiles-hyprland/.local" "~"
-cp -r "~/dotfiles-hyprland/.scripts" "~"
-cp -r "~/dotfiles-hyprland/.zsh" "~"
-cp -r "~/dotfiles-hyprland/Pictures" "~"
-cp "~/dotfiles-hyprland/.env" "~"
-cp "~/dotfiles-hyprland/.zsh-alias" "~"
-cp "~/dotfiles-hyprland/.zshrc" "~"
+cp -r "/home/$USER/dotfiles-hyprland/.config" "/home/$USER"
+cp -r "/home/$USER/dotfiles-hyprland/.local" "/home/$USER"
+cp -r "/home/$USER/dotfiles-hyprland/.scripts" "/home/$USER"
+cp -r "/home/$USER/dotfiles-hyprland/.zsh" "/home/$USER"
+cp -r "/home/$USER/dotfiles-hyprland/Pictures" "/home/$USER"
+cp "/home/$USER/dotfiles-hyprland/.env" "/home/$USER"
+cp "/home/$USER/dotfiles-hyprland/.zsh-alias" "/home/$USER"
+cp "/home/$USER/dotfiles-hyprland/.zshrc" "/home/$USER"
 echo "done!"
 sleep 1;
 
