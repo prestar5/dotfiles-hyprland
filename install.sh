@@ -45,24 +45,39 @@ clear
 echo "installing required packages from arch repos..."
 sleep 1;
 paru -S $pkg_pacman --noconfirm
+echo "done!"
+sleep 1;
 
 clear
 echo "install aur shit idk"
 sleep 1;
 paru -S $pkg_aur --noconfirm
+echo "done!"
+sleep 1;
 
+# script permissions + move files to correct dirs
 clear
-echo "installing other programs..."
-# install eric murphy's rofi wifi menu
-#git clone https://github.com/ericmurphyxyz/rofi-wifi-menu.git
-#cd rofi-wifi-menu
-#bash "./rofi-wifi-menu.sh"
+echo "setting all dotfile scripts to have executable permissions..."
+chmod +x ~/dotfiles/.scripts/*.sh
+chmod +x ~/dotfiles/.config/rofi/launchers/type-6/launcher.sh
+chmod +x ~/dotfiles/.config/rofi/powermenu/type-5/powermenu.sh
+echo "done!"
 
-# copy dotfiles
-# >todo
+echo "moving files to correct locations..."
+cp -r "~/dotfiles-hyprland/.config" "~"
+cp -r "~/dotfiles-hyprland/.local" "~"
+cp -r "~/dotfiles-hyprland/.scripts" "~"
+cp -r "~/dotfiles-hyprland/.zsh" "~"
+cp -r "~/dotfiles-hyprland/Pictures" "~"
+cp "~/dotfiles-hyprland/.env" "~"
+cp "~/dotfiles-hyprland/.zsh-alias" "~"
+cp "~/dotfiles-hyprland/.zshrc" "~"
+echo "done!"
+sleep 1;
 
 # enable services
-# >todo
+# >todo: finish
+sudo systemctl enable sddm.service
 
 # finish msg
-echo "finished installing and configuring the system! you should probably restart the system or something idk"
+echo "finished installing."
