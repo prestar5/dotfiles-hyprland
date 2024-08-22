@@ -55,7 +55,7 @@ mainbox {
     border-radius:               12px;
     background-color:            transparent;
     children:                    [ "inputbar", "listview", "message" ];
-    border: 2px;
+    border: 1px;
     border-color: @foreground;
 }
 
@@ -81,7 +81,7 @@ textbox-prompt-colon {
     border-radius:               12px;
     background-color:            @urgent;
     text-color:                  @background;
-    border: 2px;
+    border: 1px;
     border-color: @foreground;
 }
 prompt {
@@ -90,7 +90,7 @@ prompt {
     border-radius:               12px;
     background-color:            @active;
     text-color:                  @foreground;
-    border: 2px;
+    border: 1px;
     border-color: @foreground;
 }
 
@@ -133,7 +133,7 @@ element-text {
 element selected.normal {
     background-color:            var(selected);
     text-color:                  var(background);
-    border: 2px;
+    border: 1px;
     border-color: @foreground;
 }
 

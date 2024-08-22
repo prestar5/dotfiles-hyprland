@@ -57,7 +57,7 @@ mainbox {
     orientation:                 horizontal;
     children:                    [ "imagebox", "listbox" ];
     border-radius:		 12px;
-    border: 2px;
+    border: 1px;
     border-color: @foreground;
 }
 

@@ -16,6 +16,7 @@ window > box {
     border-radius: 12px;
     /* border: solid 2px #b4befe; */
     padding: 6 0 6 0;
+    border: solid 1px #B4BEFE;
 }
 
 window {
