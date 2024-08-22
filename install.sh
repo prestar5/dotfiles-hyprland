@@ -58,9 +58,10 @@ sleep 1;
 # script permissions + move files to correct dirs
 clear
 echo "setting all dotfile scripts to have executable permissions..."
-chmod +x ~/dotfiles/.scripts/*.sh
-chmod +x ~/dotfiles/.config/rofi/launchers/type-6/launcher.sh
-chmod +x ~/dotfiles/.config/rofi/powermenu/type-5/powermenu.sh
+chmod +x ~/dotfiles-hyprland/.scripts/*.sh
+chmod +x ~/dotfiles-hyprland/.config/rofi/launchers/type-6/launcher.sh
+chmod +x ~/dotfiles-hyprland/.config/rofi/powermenu/type-5/powermenu.sh
+chmod +x ~/dotfiles-hyprland/.config/rofi/scripts/rofi-wifi-menu.sh
 echo "done!"
 
 echo "moving files to correct locations..."
