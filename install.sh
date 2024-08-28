@@ -15,7 +15,6 @@ echo "correct places. additionally, it will enable some services that will be ne
 echo ""
 
 # install paru, required for a lot of the programs i use
-# install git
 echo "please type your password to grant the script superuser permissions"
 sudo echo "access granted! proceeding with installation..."
 sudo pacman -Sy
@@ -26,8 +25,6 @@ sudo pacman -S rust --noconfirm
 echo "installing paru..."
 
 # under the assumption paru is not installed. should detect if paru is installed or not, idk.
-# > todo: add a module which detects if paru or other aur helper is installed
-temporarily comment this out for test purposes!
 sleep 3
 sudo pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
@@ -40,14 +37,6 @@ rm -rf paru
 # define packages to install via pacman and paru
 pkg_pacman=("kitty zsh hyprland hyprpaper hyprlock rofi-wayland waybar sddm xdg-desktop-portal-hyprland xdg-desktop-portal nemo nemo-fileroller nemo-image-converter swaync pavucontrol fastfetch btop nwg-look mate-polkit ttf-terminus-nerd ttf-arimo-nerd wl-clipboard grim slurp brightnessctl playerctl noto-fonts-cjk noto-fonts-emoji qt5ct qt6ct papirus-icon-theme zoxide")
 pkg_aur=("hyprpicker hyprshade hyprshot wl-screenrec clipse checkupdates-with-aur auto-cpufreq ungoogled-chromium-bin catppuccin-cursors-mocha rofi-emoji-git")
-
-#download pokeget
-git clone --recurse-submodules https://github.com/talwat/pokeget-rs.git
-cd pokeget-rs
-cargo build --release
-sudo mv target/release/pokeget ~/usr/bin
-cd ..
-rm -rf pokeget-rs
 
 clear
 echo "installing required packages from arch repos..."
@@ -62,6 +51,14 @@ sleep 1;
 paru -S $pkg_aur --noconfirm
 echo "done!"
 sleep 1;
+
+#download pokeget
+git clone --recurse-submodules https://github.com/talwat/pokeget-rs.git
+cd pokeget-rs
+cargo build --release
+sudo mv target/release/pokeget /usr/bin
+cd ..
+rm -rf pokeget-rs
 
 # script permissions + move files to correct dirs
 clear
