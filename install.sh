@@ -40,6 +40,8 @@ rm -rf paru
 # define packages to install via pacman and paru
 pkg_pacman=("kitty zsh hyprland hyprpaper hyprlock rofi-wayland waybar sddm xdg-desktop-portal-hyprland xdg-desktop-portal nemo nemo-fileroller nemo-image-converter swaync pavucontrol fastfetch btop nwg-look mate-polkit ttf-terminus-nerd ttf-arimo-nerd wl-clipboard grim slurp brightnessctl playerctl noto-fonts-cjk noto-fonts-emoji qt5ct qt6ct papirus-icon-theme zoxide")
 pkg_aur=("hyprpicker hyprshade hyprshot wl-screenrec clipse checkupdates-with-aur auto-cpufreq ungoogled-chromium-bin catppuccin-cursors-mocha rofi-emoji-git")
+
+#download pokeget
 git clone --recurse-submodules https://github.com/talwat/pokeget-rs.git
 cd pokeget-rs
 cargo build --release
