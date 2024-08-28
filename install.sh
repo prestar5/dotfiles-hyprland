@@ -85,8 +85,8 @@ echo "done!"
 sleep 1;
 
 # enable services
-# >todo: finish
 sudo systemctl enable sddm.service
+chsh -s $(which zsh)
 
 # finish msg
 echo "finished installing."
