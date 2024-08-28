@@ -180,6 +180,4 @@ configuration {
 */
 }
 
-//@theme "/home/max/.config/rofi/themes/catppuccin-mocha.rasi"
-
-@theme "/home/max/.config/rofi/themes/mocha.rasi"
+@theme "~/.config/rofi/themes/mocha.rasi"
