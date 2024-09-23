@@ -1,5 +1,6 @@
 {
   "reload_style_on_change": true,
+//  "output": "HDMI-A-1",
   "layer": "top",
     "modules-left": ["custom/arch", "hyprland/workspaces", "tray"],
     "modules-center": ["clock",],
@@ -23,9 +24,8 @@
 	"5": "󰆈",
 	"6": "",
 	"10": "󰙯",
-        "active": "",
-	"default": "",
-	"special": "",
+	"default": "󱥒",
+	"special": "",
       },
     },
     "clock": {
@@ -76,10 +76,12 @@
       "spacing": 5
     },
     "cpu": {
-      "format": "<span color='#b4befe'> </span> {usage}%"
+      "format": "<span color='#b4befe'> </span> {usage}%",
+      "on-click": "pkill btop || exec kitty -e btop"
     },
     "memory": {
-      "format": "<span color='#b4befe'> </span> {percentage}%"
+      "format": "<span color='#b4befe'> </span> {percentage}%",
+      "on-click": "pkill btop || exec kitty -e btop"
     },
     "group/systemstats": {
        "orientation": "horizontal",

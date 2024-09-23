@@ -1,16 +1,16 @@
 #!/bin/bash
 
-echo "                                                                                              ";
-echo "   __             _      __                                            __                 __  ";
-echo "  / _)           | |     \ \                                           \ \               / _) ";
-echo "  \ \   ___ ___ _| |_  _  \ \   ___ ____ _____ _ __  _  _  _ ______ ___ \ \   __  ___  __\ \  ";
-echo " / _ \ / _ (   )     \| |  > \ / __)  ._|_____) '_ \| || || (  __  ) _ \ > \ /  \/ / |/ / _ \ ";
-echo "( (_) | (_) ) ( (| |) ) | / ^ \> _| () )      | | | | \| |/ || || | |_) ) ^ ( ()  <| / ( (_) )";
-echo " \___/ \___/ \_)_   _/ \_)_/ \_\___)__/       |_| | |\_   _/ |_||_|  __/_/ \_\__/\_\__/ \___/ ";
-echo "                 | |                              | |  | |        | |                         ";
-echo "                 |_|                              |_|  |_|        |_|                         ";
-echo "";
-echo "this script will automatically install the programs and move the configuration files to the";
+echo "                                                                                              "
+echo "   __             _      __                                            __                 __  "
+echo "  / _)           | |     \ \                                           \ \               / _) "
+echo "  \ \   ___ ___ _| |_  _  \ \   ___ ____ _____ _ __  _  _  _ ______ ___ \ \   __  ___  __\ \  "
+echo " / _ \ / _ (   )     \| |  > \ / __)  ._|_____) '_ \| || || (  __  ) _ \ > \ /  \/ / |/ / _ \ "
+echo "( (_) | (_) ) ( (| |) ) | / ^ \> _| () )      | | | | \| |/ || || | |_) ) ^ ( ()  <| / ( (_) )"
+echo " \___/ \___/ \_)_   _/ \_)_/ \_\___)__/       |_| | |\_   _/ |_||_|  __/_/ \_\__/\_\__/ \___/ "
+echo "                 | |                              | |  | |        | |                         "
+echo "                 |_|                              |_|  |_|        |_|                         "
+echo ""
+echo "this script will automatically install the programs and move the configuration files to the"
 echo "correct places. additionally, it will enable some services that will be needed via systemctl."
 echo ""
 
@@ -40,17 +40,17 @@ pkg_aur=("hyprpicker hyprshade hyprshot wl-screenrec clipse checkupdates-with-au
 
 clear
 echo "installing required packages from arch repos..."
-sleep 1;
+sleep 1
 paru -S $pkg_pacman --noconfirm
 echo "done!"
-sleep 1;
+sleep 1
 
 clear
 echo "install aur shit idk"
-sleep 1;
+sleep 1
 paru -S $pkg_aur --noconfirm
 echo "done!"
-sleep 1;
+sleep 1
 
 #download pokeget
 git clone --recurse-submodules https://github.com/talwat/pokeget-rs.git
@@ -79,7 +79,7 @@ cp "/home/$USER/dotfiles-hyprland/.env" "/home/$USER"
 cp "/home/$USER/dotfiles-hyprland/.zsh-alias" "/home/$USER"
 cp "/home/$USER/dotfiles-hyprland/.zshrc" "/home/$USER"
 echo "done!"
-sleep 1;
+sleep 1
 
 # enable services
 sudo systemctl enable sddm.service

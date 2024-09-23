@@ -21,7 +21,7 @@ compinit
 # End of lines added by compinstall
 
 echo
-pokeget vaporeon --hide-name
+pokeget random --hide-name
 echo
 
 eval "$(zoxide init zsh)"
