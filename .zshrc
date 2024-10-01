@@ -32,3 +32,7 @@ bindkey "^[[3;5~" kill-word
 bindkey  "^[[3~"  delete-char
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
+
+source <(fzf --zsh)
+
+FZF_ALT_C_COMMAND= source <(fzf --zsh)

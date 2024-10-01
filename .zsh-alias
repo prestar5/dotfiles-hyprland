@@ -7,3 +7,4 @@ alias neofetch="fastfetch"
 alias aw="wiki-search-html"
 alias cd="z"
 alias dotfiles='/usr/bin/git --git-dir=/home/max/dots --work-tree=/home/max'
+alias fucking="sudo"
